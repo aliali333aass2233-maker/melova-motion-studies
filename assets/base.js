@@ -1,0 +1,2 @@
+const toggle=document.querySelector('[data-pause]');if(toggle)toggle.onclick=()=>{document.body.classList.toggle('paused');toggle.textContent=document.body.classList.contains('paused')?'Play motion':'Pause motion'};
+document.querySelectorAll('[data-bars]').forEach((root)=>{const count=Number(root.dataset.bars||32);for(let i=0;i<count;i++){const bar=document.createElement('i');bar.style.setProperty('--i',i);bar.style.setProperty('--h',`${18+(i*37)%78}%`);root.appendChild(bar)}});
